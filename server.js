@@ -2,8 +2,6 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-require('dotenv').config();
-require('./config/database'); // Make sure this sets up the database connection
 
 const app = express();
 
@@ -16,7 +14,6 @@ app.use(express.json());
 
 // Configure both serve-favicon & static middleware
 // to serve from the production 'dist' folder
-app.use(favicon(path.join(__dirname, 'dist', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // The following "catch all" route (note the *) is necessary
