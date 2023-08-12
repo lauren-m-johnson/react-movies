@@ -1,5 +1,11 @@
+import { Link } from 'react-router-dom';
+
 export default function NavBar() {
     return (
-        <h1>NavBar</h1>
+        <nav>
+        <Link to="/">Movie List</Link>
+        &nbsp; | &nbsp;
+        <Link to="/actors">Actor List</Link>
+    </nav>
     );
 }
