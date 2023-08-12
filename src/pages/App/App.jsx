@@ -1,8 +1,11 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import MovieListPage from '../MovieListPage/MovieListPage';
+import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
+import ActorListPage from '../ActorListPage/ActorListPage';
 import LoginPage from '../LoginPage/LoginPage';
-import NavBar from '../NavBar/NavBar';
+import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
   const [user, setUser] = useState({});
@@ -12,8 +15,9 @@ export default function App() {
       <>
         <NavBar />
         <Routes>
-            <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/" element={<MovieListPage />} />
+            <Route path="/movies/:movieName" element={<MovieDetailPage />} />
+            <Route path="/actors" element={<ActorListPage />} />
         </Routes>
       </>
       :
