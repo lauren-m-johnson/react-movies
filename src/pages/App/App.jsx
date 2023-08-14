@@ -8,7 +8,12 @@ import LoginPage from '../LoginPage/LoginPage';
 import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
+
+  function handleSignUp(name){
+    setUser(name);
+  }
+
   return (
     <main className="App">
       { user ?
@@ -21,7 +26,7 @@ export default function App() {
         </Routes>
       </>
       :
-      <LoginPage />
+      <LoginPage handleSignUp={handleSignUp}/>
       }
     </main>
   );
