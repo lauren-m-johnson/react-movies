@@ -1,5 +1,13 @@
-export default function MovieListPage() {
+import MovieCard from "../../components/MovieCard/MovieCard";
+
+export default function MovieListPage(props) {
     return (
-        <h1>Movie List Page</h1>
+        <div>
+            {
+                props.movies.map(movie => {
+                    return <MovieCard key={movie.title} movie={movie} />
+                })
+            }
+        </div>
     );
 }

@@ -6,6 +6,7 @@ import MovieDetailPage from '../MovieDetailPage/MovieDetailPage';
 import ActorListPage from '../ActorListPage/ActorListPage';
 import LoginPage from '../LoginPage/LoginPage';
 import NavBar from '../../components/NavBar/NavBar';
+import { movies } from "../../data.js";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -20,9 +21,9 @@ export default function App() {
       <>
         <NavBar />
         <Routes>
-            <Route path="/" element={<MovieListPage />} />
-            <Route path="/movies/:movieName" element={<MovieDetailPage />} />
-            <Route path="/actors" element={<ActorListPage />} />
+            <Route path="/" element={<MovieListPage movies={movies} />} />
+            <Route path="/movies/:movieName" element={<MovieDetailPage movies={movies} />} />
+            <Route path="/actors" element={<ActorListPage movies={movies} />} />
         </Routes>
       </>
       :

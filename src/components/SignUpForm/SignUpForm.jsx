@@ -18,7 +18,7 @@ export default function SignUpForm({handleSignUp}){
     return(
         <form onSubmit={handleSubmit}>
             <label>
-                Name: 
+                Username: 
                 <input
                 name='name'
                 value={formData.name}
@@ -26,7 +26,7 @@ export default function SignUpForm({handleSignUp}){
                 placeholder=""   
                 />
             </label>
-                <button type="submit">Sign Up</button>
+                <button type="submit">Sign In</button>
         </form> 
     )
 }
