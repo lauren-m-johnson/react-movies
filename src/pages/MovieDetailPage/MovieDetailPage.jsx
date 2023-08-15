@@ -6,7 +6,7 @@ export default function MovieDetailPage( {movies} ) {
     return (
         <div>
             <h1>{movie.title}</h1>
-            <h2>Realeased: {new Date(movie.release_date).toLocaleDateString()}</h2>
+            <h2>Realeased: {new Date(movie.releaseDate).toLocaleDateString()}</h2>
             <h3>Cast Members:</h3>
             <ul>
                 {
@@ -15,7 +15,7 @@ export default function MovieDetailPage( {movies} ) {
                     })
                 }
             </ul>
-            <img src={`${movie.poster_path}`} alt=""/>
+            <img src={`${movie.posterPath}`} />
         </div>
     );
 }
