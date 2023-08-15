@@ -22,8 +22,7 @@ export default function SignUpForm({handleSignUp}){
                 <input
                 name='name'
                 value={formData.name}
-                onChange={handleChange}
-                placeholder=""   
+                onChange={handleChange} 
                 />
             </label>
                 <button type="submit">Sign In</button>

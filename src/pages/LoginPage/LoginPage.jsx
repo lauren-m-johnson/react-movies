@@ -4,7 +4,7 @@ export default function LoginPage({ handleSignUp }) {
     return (
         <>
             <h1>Please Sign In</h1>
-            < SignUpForm handleSignUp={handleSignUp}/>
+            <SignUpForm handleSignUp={handleSignUp}/>
         </>
     );
 }
