@@ -4,15 +4,15 @@
 }
 
 .movie-card {
-    background-size: contain;
     width: 150px;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
     margin: 20px;
-    color: rgb(255, 9, 9);
+    color: rgb(255, 255, 255);
+    border: solid 5px aquamarine;
+    border-radius: 5px;
 }
 
 .movie-card-container {
