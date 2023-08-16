@@ -1,4 +1,5 @@
 .actor-card {
-    background-color: aquamarine;
-    
+    background-color: gold;
+    max-width: 300px;
+    margin: auto;
 }
